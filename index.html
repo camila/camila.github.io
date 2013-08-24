@@ -1,86 +1,520 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>camila.github.io by camila</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Projects old and new</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+
+
+  <style>
+  #accordion-resizer {
+    padding: 10px;
+    width: 800px;
+    height: 250px;
+  }
+  </style>
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "fill"
+    });
+  });
+  $(function() {
+    $( "#accordion-resizer" ).resizable({
+      minHeight: 250,
+      minWidth: 800,
+      resize: function() {
+        $( "#accordion" ).accordion( "refresh" );
+      }
+    });
+  });
+  </script>
+
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+      <![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
-
-      <header>
-        <h1>camila.github.io</h1>
-        <p></p>
-      </header>
+    </head>
+    <body>
 
       <div id="banner">
         <span id="logo"></span>
-
         <a href="https://github.com/camila" class="button fork"><strong>View On GitHub</strong></a>
+        
       </div><!-- end banner -->
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h3>
-<a name="projects-old-and-new" class="anchor" href="#projects-old-and-new"><span class="octicon octicon-link"></span></a>Projects old and new</h3>
+      <div class="wrapper">
+        <nav>
+          <ul></ul>
+        </nav>
+        <section>
+          <h3>
+            <a name="projects-old-and-new" class="anchor" href="#projects-old-and-new"><span class="octicon octicon-link"></span></a></h3>
 
-<h4>
-<a name="gh-projects" class="anchor" href="#gh-projects"><span class="octicon octicon-link"></span></a>gh projects</h4>
+            <h4>
+              <a name="gh-projects" class="anchor" href="#gh-projects"><span class="octicon octicon-link"></span></a>gh projects</h4>
 
-<p>WIP</p>
+              <p>WIP</p>
 
-<h4>
-<a name="sf-projects" class="anchor" href="#sf-projects"><span class="octicon octicon-link"></span></a>sf projects</h4>
+              <hr class="style-three">
+              <h4>
+                <a name="sf-projects" class="anchor" href="#sf-projects"><span class="octicon octicon-link"></span></a><a href="https://github.com/camila/sf-java">sf projects</a></h4>
 
-<p>Link: <a href="https://github.com/camila/sf-java">https://github.com/camila/sf-java</a></p>
 
-<h6>
-<a name="jsimpledice" class="anchor" href="#jsimpledice"><span class="octicon octicon-link"></span></a>jSimpleDice</h6>
+                <ul><li>
+                  <a name="jsimpledice" class="anchor" href="#jsimpledice"><span class="octicon octicon-link"></span></a>jSimpleDice</li></ul>
 
-<p>A simple dice simulator using <em>java.util.Random</em>.</p>
+                  <dd>
 
-<p>Requires J2ME for Palm (JavaHQ 1.0 available at java.sun.com).</p>
+                    <p class="download">Download: <a href="http://sourceforge.net/project/showfiles.php?group_id=103575">single package</a> with source and binaries (jar, jad and prc)</p>
 
-<p>Available options: d10, d6, 'd3' (janken-pon) and 'd2' (flip coin).</p>
+                    <p>A simple dice simulator using <em>java.util.Random</em>.</p>
 
-<p>I've tested it on color devices only, I don't guarantee it works otherwise. Hi-Res recommended!</p>
+                    <img src="./images/ssjsd.png" border="0">&nbsp;&nbsp;<img src="./images/dados.png" border="0">&nbsp;&nbsp;<img src="./images/jsimpledice.jpg" align="top" border="1">
 
-<p>Download:</p>
+                    <p>Requires J2ME for Palm (JavaHQ 1.0 available at java.sun.com).</p>
 
-<p>jsimpledice: <a href="http://sourceforge.net/project/showfiles.php?group_id=103575">single package</a> with source and binaries (jar, jad and prc)</p>
+                    <p>Available options: d10, d6, 'd3' (janken-pon) and 'd2' (flip coin).</p>
 
-<p>Everything provided here is under the GNU/GPL license.</p>
+                    <p>I've tested it on color devices only, I don't guarantee it works otherwise. Hi-Res recommended!</p>
 
-<p>To generate the PRC using <em>midp4palm1.0</em>:</p>
+                    <p>Everything provided here is under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU/GPL</a> license.</p>
 
-<pre><code>java -cp "/full_path_to/Converter.jar" com.sun.midp.palm.database.MakeMIDPApp 
--jad jSimpleDice.jad -icon dice.bmp -smallicon ydice.bmp 
--longname "jSimpleDice" -creator kJSD
--outfile jSD.prc jSimpleDice.jar
-</code></pre>
+                    <p>To generate the PRC using <em>midp4palm1.0</em>:</p>
 
-<p>The icon bmps must be 1 bit (black and white).</p>
+                    <pre><code>java -cp "/full_path_to/Converter.jar" com.sun.midp.palm.database.MakeMIDPApp 
+                      -jad jSimpleDice.jad -icon dice.bmp -smallicon ydice.bmp 
+                      -longname "jSimpleDice" -creator kJSD
+                      -outfile jSD.prc jSimpleDice.jar
+                    </code></pre>
 
-<p>Can you find the easter egg?</p>
+                    <p>The icon bmps must be 1 bit (black and white).</p>
 
-<p><a href="http://jsimpledice.sourceforge.net/JSimpleDiceMIDlet.java.html">source</a></p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+                    <p>Can you find the easter egg?</p>
+
+                    &nbsp;&nbsp;<img src="./images/about.png" border="2" alt="credits">
+
+
+                  </dd>
+
+                  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+                  <div id="accordion-resizer" class="ui-widget-content">
+                    <div id="accordion">
+                      <h3>source</h3>
+                      <div>
+
+                        <!-- meta name="Generator" content="Vim/6.3" -->
+
+                        <pre><font color="#ff40ff">package</font> net.sf.jsimpledice;
+
+                          <font color="#ff40ff">import</font> java.io.IOException;
+                          <font color="#ff40ff">import</font> java.util.Random;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Alert;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.AlertType;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Canvas;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Choice;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.ChoiceGroup;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Command;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.CommandListener;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Display;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Displayable;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Form;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Graphics;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Image;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.ImageItem;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.Item;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.ItemStateListener;
+                          <font color="#ff40ff">import</font> javax.microedition.lcdui.StringItem;
+                          <font color="#ff40ff">import</font> javax.microedition.midlet.MIDlet;
+                          <font color="#ff40ff">import</font> javax.microedition.midlet.MIDletStateChangeException;
+
+                          <font color="#8080ff">/*</font>
+                          <font color="#8080ff"> * JSimpleDice: A simple dice simulator.</font>
+                          <font color="#8080ff"> * </font>
+                          <font color="#8080ff"> * Changes since first release: rewritten to make the code more legible &lt;/p&gt;</font>
+                          <font color="#8080ff"> * </font>
+                          <font color="#8080ff"> * development time: almost 4 days! (my first MIDlet!) &lt;/p&gt;</font>
+                          <font color="#8080ff"> * </font>
+                          <font color="#8080ff"> * Thanks to: My brother for the janken-pon and &amp;quot;dice bias ratings&amp;quot;</font>
+                          <font color="#8080ff"> * Eric for the easy-to-understand animation class Tyler Akins for D&amp;amp;D</font>
+                          <font color="#8080ff"> * Helper that gave me algorithm ideas</font>
+                          <font color="#8080ff"> * </font>
+                          <font color="#8080ff"> * No thanks to: Palm for not supporting developments and developers Palm for</font>
+                          <font color="#8080ff"> * taking so long to support MIDP 2.0 Palm for... all the dumb things and</font>
+                          <font color="#8080ff"> * mistakes of the platform.</font>
+                          <font color="#8080ff"> * </font>
+                          <font color="#8080ff"> * This program is under GNU GPL License <a href="http://www.gnu.org/">http://www.gnu.org</a> for information.</font>
+                          <font color="#8080ff"> *  </font>
+                          <font color="#8080ff"> */</font>
+                          <font color="#00ff00">public</font> <font color="#00ff00">class</font> JSimpleDiceMIDlet <font color="#00ff00">extends</font> MIDlet <font color="#00ff00">implements</font> CommandListener,
+                          ItemStateListener
+                          {
+                          <font color="#8080ff">/**</font>
+                          <font color="#8080ff">     *</font><font color="#ff40ff"> Animation class by Eric Giguere as seen on developers.sun</font>
+                          <font color="#8080ff">     *</font><font color="#ff40ff"> </font><font color="#00ffff">&lt;</font><font color="#ffff00">p</font><font color="#00ffff">&gt;</font>
+                          <font color="#8080ff">     *</font><font color="#ff40ff"> Modifications: added Thread.sleep before call to serialization else it</font>
+                          <font color="#8080ff">     *</font><font color="#ff40ff"> runs too fast for jSimpleDice 2 frames.</font>
+                          <font color="#8080ff">     * </font><font color="#00ffff">&lt;/</font><font color="#ffff00">p</font><font color="#00ffff">&gt;</font>
+                          <font color="#8080ff">     */</font>
+                          <font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">class</font> Animation <font color="#00ff00">extends</font> Canvas <font color="#00ff00">implements</font> Runnable
+                          {
+                          <font color="#00ff00">private</font> Display display;
+                          <font color="#00ff00">private</font> Image[] frames;
+                          <font color="#00ff00">private</font> <font color="#00ff00">boolean</font> go = <font color="#ff6060">false</font>;
+                          <font color="#00ff00">private</font> <font color="#00ff00">int</font> next = <font color="#ff6060">0</font>;
+
+                          <font color="#00ff00">public</font> Animation(Image[] frames, Display display) {
+                          <font color="#00ff00">this</font>.display = display;
+                          <font color="#00ff00">this</font>.frames = frames;
+                        }
+
+                        <font color="#00ff00">protected</font> <font color="#00ff00">void</font> paint(Graphics g)
+                        {
+                        g.drawImage(frames[next], <font color="#ff6060">30</font>, <font color="#ff6060">20</font>, Graphics.TOP | Graphics.LEFT);
+                      }
+
+                      <font color="#8080ff">// called after previous repaint</font>
+                      <font color="#00ff00">public</font> <font color="#00ff00">void</font> run()
+                      {
+                      <font color="#ffff00">if</font> (go) {
+                      <font color="#ffff00">if</font> (++next &gt;= frames.length)
+                      next = <font color="#ff6060">0</font>;
+                      repaint();
+                      <font color="#ffff00">try</font> {
+                      Thread.sleep(<font color="#ff6060">100</font>);
+                    } <font color="#ffff00">catch</font> (InterruptedException e) {
+                    <font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG
+                    + e.getMessage());
+                  }
+                  display.callSerially(<font color="#00ff00">this</font>);
+                }
+              }
+
+              <font color="#00ff00">public</font> <font color="#00ff00">void</font> startAnimation()
+              {
+              go = <font color="#ff6060">true</font>;
+              repaint();
+              <font color="#ffff00">try</font> {
+              Thread.sleep(<font color="#ff6060">100</font>);
+            } <font color="#ffff00">catch</font> (InterruptedException e) {
+            <font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG + e.getMessage());
+          }
+          display.callSerially(<font color="#00ff00">this</font>);
+        }
+
+        <font color="#00ff00">public</font> <font color="#00ff00">void</font> stopAnimation()
+        {
+        go = <font color="#ff6060">false</font>;
+      }
+    }
+
+    <font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">class</font> JSimpleDiceException <font color="#00ff00">extends</font> RuntimeException
+    {
+    <font color="#00ff00">public</font> JSimpleDiceException() {
+    <font color="#00ff00">super</font>();
+  }
+
+  <font color="#00ff00">public</font> JSimpleDiceException(String arg0) {
+  <font color="#00ff00">super</font>(arg0);
+}
+}
+
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String EXCEPTION_MSG = <font color="#ff6060">"Oops, an error has ocurred."</font>;
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String IMG_ABOUT = <font color="#ff6060">"/img/devicon.png"</font>;
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String IMG_HEADS = <font color="#ff6060">"/img/heads.png"</font>;
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String IMG_LOGO = <font color="#ff6060">"/img/dices.png"</font>;
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String IMG_TAILS = <font color="#ff6060">"/img/tails.png"</font>;
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String IMG_TREASURE = <font color="#ff6060">"/img/tc1.png"</font>;
+<font color="#00ff00">private</font> <font color="#00ff00">static</font> <font color="#00ff00">final</font> String IMG_TREASURE2 = <font color="#ff6060">"/img/tc2.png"</font>;
+<font color="#00ff00">private</font> Command aboutCommand;
+<font color="#00ff00">private</font> ChoiceGroup cg;
+<font color="#00ff00">private</font> <font color="#00ff00">int</font> choice = <font color="#ff6060">6</font>;
+<font color="#00ff00">private</font> Display display; <font color="#8080ff">// The display for this MIDlet</font>
+<font color="#00ff00">private</font> <font color="#00ff00">int</font> easter = <font color="#ff6060">0</font>;
+<font color="#00ff00">private</font> Command exitCommand;
+<font color="#00ff00">private</font> Form form;
+<font color="#00ff00">private</font> Command homeCommand;
+<font color="#00ff00">private</font> Image img;
+<font color="#00ff00">private</font> <font color="#00ff00">int</font> result = <font color="#ff6060">0</font>;
+<font color="#00ff00">private</font> Command rollCommand;
+<font color="#00ff00">private</font> StringItem stringItem = <font color="#ffff00">new</font> StringItem(<font color="#ff6060">"Result: "</font>, <font color="#ff6060">"?"</font>);
+{
+  form = <font color="#ffff00">new</font> Form(<font color="#ff6060">""</font>);
+  cg = <font color="#ffff00">new</font> ChoiceGroup(<font color="#ff6060">"Choose: "</font>, Choice.EXCLUSIVE, <font color="#ffff00">new</font> String[] {
+  <font color="#ff6060">"d10"</font>, <font color="#ff6060">"d6"</font>, <font color="#ff6060">"Janken-pon"</font>, <font color="#ff6060">"Flip Coin"</font> }, <font color="#ff6060">null</font>);
+}
+
+<font color="#00ff00">public</font> JSimpleDiceMIDlet() {
+display = Display.getDisplay(<font color="#00ff00">this</font>);
+rollCommand = <font color="#ffff00">new</font> Command(<font color="#ff6060">"Go!"</font>, Command.SCREEN, <font color="#ff6060">1</font>);
+aboutCommand = <font color="#ffff00">new</font> Command(<font color="#ff6060">"About"</font>, Command.SCREEN, <font color="#ff6060">2</font>);
+exitCommand = <font color="#ffff00">new</font> Command(<font color="#ff6060">"Exit"</font>, Command.SCREEN, <font color="#ff6060">2</font>);
+homeCommand = <font color="#ffff00">new</font> Command(<font color="#ff6060">"Nice!"</font>, Command.SCREEN, <font color="#ff6060">1</font>);
+}
+
+<font color="#8080ff">/*</font>
+<font color="#8080ff">     * Respond to commands.</font>
+<font color="#8080ff">     */</font>
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> commandAction(Command cmd, Displayable d)
+{
+  <font color="#ffff00">if</font> (cmd == exitCommand) {
+  exitMIDlet();
+}
+<font color="#ffff00">if</font> (cmd == rollCommand) {
+nroll();
+<font color="#8080ff">/*</font>
+<font color="#8080ff">             * Easter Egg! After 99 rolls, displays a treasure animation!</font>
+<font color="#8080ff">             */</font>
+showEaster();
+easter++;
+}
+<font color="#ffff00">if</font> (cmd == homeCommand) {
+display.setCurrent(form);
+}
+<font color="#ffff00">if</font> (cmd == aboutCommand) {
+<font color="#ffff00">try</font> {
+img = Image.createImage(IMG_ABOUT);
+} <font color="#ffff00">catch</font> (IOException e) {
+<font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG + e.getMessage());
+}
+showAbout();
+}
+}
+
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> d6()
+{
+  showResultImage();
+}
+
+<font color="#8080ff">/**</font>
+<font color="#8080ff">     *</font><font color="#ff40ff"> Destroy must cleanup everything not handled by the garbage collector.</font>
+<font color="#8080ff">     */</font>
+<font color="#00ff00">protected</font> <font color="#00ff00">void</font> destroyApp(<font color="#00ff00">boolean</font> unconditional)
+<font color="#00ff00">throws</font> MIDletStateChangeException
+{
+  exitMIDlet();
+}
+
+<font color="#00ff00">private</font> <font color="#00ff00">void</font> displayForm(ImageItem logo)
+{
+  form.append(logo);
+  form.append(cg);
+  form.setItemStateListener(<font color="#00ff00">this</font>);
+  form.append(stringItem);
+  form.addCommand(rollCommand);
+  form.addCommand(aboutCommand);
+  form.addCommand(exitCommand);
+  form.setCommandListener(<font color="#00ff00">this</font>);
+  display.setCurrent(form);
+}
+
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> exitMIDlet()
+{
+  notifyDestroyed();
+}
+
+<font color="#00ff00">public</font> String flipcoin()
+{
+  Alert alert = <font color="#ff6060">null</font>;
+  String s = <font color="#ff6060">""</font>;
+  <font color="#ffff00">switch</font> (result) {
+  <font color="#ffff00">case</font> <font color="#ff6060">1</font>:
+  <font color="#ffff00">try</font> {
+  img = Image.createImage(IMG_HEADS);
+} <font color="#ffff00">catch</font> (IOException e) {
+<font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG + e.getMessage());
+}
+s = <font color="#ff6060">"Heads"</font>;
+<font color="#ffff00">break</font>;
+<font color="#ffff00">        </font><font color="#ffff00">default</font>:
+<font color="#ffff00">try</font> {
+img = Image.createImage(IMG_TAILS);
+} <font color="#ffff00">catch</font> (IOException e) {
+<font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG + e.getMessage());
+}
+s = <font color="#ff6060">"Tails"</font>;
+<font color="#ffff00">break</font>;
+}
+alert = <font color="#ffff00">new</font> Alert(s, <font color="#ff6060">null</font>, img, AlertType.INFO);
+alert.setTimeout(Alert.FOREVER);
+display.setCurrent(alert, form);
+<font color="#ffff00">return</font> s;
+}
+
+<font color="#00ff00">public</font> Display getDisplay()
+{
+  <font color="#ffff00">return</font> display;
+}
+
+<font color="#8080ff">/**</font>
+<font color="#8080ff">     *</font><font color="#ff40ff"> required for the interface, detects ChoiceGroup selection</font>
+<font color="#ff40ff">     </font><font color="#8080ff">*/</font>
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> itemStateChanged(Item item)
+{
+  <font color="#00ff00">int</font> iindex = cg.getSelectedIndex();
+  <font color="#ffff00">switch</font> (iindex) {
+  <font color="#ffff00">case</font> <font color="#ff6060">0</font>:
+  choice = <font color="#ff6060">10</font>;
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">case</font> <font color="#ff6060">1</font>:
+  choice = <font color="#ff6060">6</font>;
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">case</font> <font color="#ff6060">2</font>:
+  choice = <font color="#ff6060">3</font>;
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">case</font> <font color="#ff6060">3</font>:
+  choice = <font color="#ff6060">2</font>;
+}
+}
+
+<font color="#00ff00">public</font> String janken()
+{
+  Alert alert = <font color="#ff6060">null</font>;
+  String s = <font color="#ff6060">""</font>;
+  <font color="#ffff00">switch</font> (result) {
+  <font color="#ffff00">case</font> <font color="#ff6060">1</font>:
+  s = <font color="#ff6060">"Paper"</font>;
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">case</font> <font color="#ff6060">2</font>:
+  s = <font color="#ff6060">"Rock"</font>;
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">        </font><font color="#ffff00">default</font>:
+  s = <font color="#ff6060">"Scissors"</font>;
+  <font color="#ffff00">break</font>;
+}
+<font color="#ffff00">try</font> {
+img = Image.createImage(<font color="#ff6060">"/img/"</font> + s.toLowerCase() + <font color="#ff6060">".png"</font>);
+} <font color="#ffff00">catch</font> (IOException e) {
+e.printStackTrace();
+}
+alert = <font color="#ffff00">new</font> Alert(s, <font color="#ff6060">null</font>, img, AlertType.CONFIRMATION);
+alert.setTimeout(Alert.FOREVER);
+display.setCurrent(alert, form);
+<font color="#ffff00">return</font> s;
+}
+
+<font color="#8080ff">/**</font>
+<font color="#8080ff">     *</font><font color="#ff40ff"> Generates the random number depending on selection</font>
+<font color="#ff40ff">     </font><font color="#8080ff">*/</font>
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> nroll()
+{
+  Random r = <font color="#ffff00">new</font> Random();
+  result = r.nextInt(); <font color="#8080ff">// r.nextInt(int) unavailable (midp 1.0)</font>
+  <font color="#ffff00">if</font> (result &lt; <font color="#ff6060">0</font>)
+  result *= -<font color="#ff6060">1</font>; <font color="#8080ff">// as it is signed</font>
+  result %= choice;
+  result++;
+  String s = String.valueOf(result);
+  <font color="#ffff00">switch</font> (choice) {
+  <font color="#ffff00">case</font> <font color="#ff6060">2</font>:
+  flipcoin();
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">case</font> <font color="#ff6060">3</font>:
+  janken();
+  <font color="#ffff00">break</font>;
+  <font color="#ffff00">case</font> <font color="#ff6060">6</font>:
+  d6();
+  <font color="#ffff00">break</font>;
+}
+stringItem.setText(s);
+}
+
+<font color="#8080ff">/**</font>
+<font color="#8080ff">     *</font><font color="#ff40ff"> Pause is a no-op since there are no background activities or record</font>
+<font color="#8080ff">     *</font><font color="#ff40ff"> stores that need to be closed.</font>
+<font color="#8080ff">     */</font>
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> pauseApp()
+{
+}
+
+<font color="#00ff00">private</font> <font color="#00ff00">void</font> showAbout()
+{
+  Form about = <font color="#ffff00">new</font> Form(<font color="#ff6060">""</font>);
+  about.append(<font color="#ffff00">new</font> ImageItem(<font color="#ff6060">null</font>, img, ImageItem.LAYOUT_NEWLINE_AFTER
+  | ImageItem.LAYOUT_NEWLINE_BEFORE | ImageItem.LAYOUT_CENTER,
+  <font color="#ff6060">null</font>));
+  about.append(<font color="#ffff00">new</font> StringItem(<font color="#ff6060">"jSimpleDice MIDlet by k"</font>, <font color="#ff6060">null</font>));
+  about.append(<font color="#ff6060">"</font><font color="#ff40ff">\n</font><font color="#ff6060">jsimpledice.sf.net"</font>);
+  about.append(<font color="#ffff00">new</font> StringItem(<font color="#ff6060">"</font><font color="#ff40ff">\n</font><font color="#ff6060">java.util.Random by"</font>,
+  <font color="#ff6060">"J2ME MIDP 1.0 Specs"</font>));
+  about.addCommand(homeCommand);
+  about.setCommandListener(<font color="#00ff00">this</font>);
+  display.setCurrent(about);
+}
+
+<font color="#00ff00">private</font> <font color="#00ff00">void</font> showEaster()
+{
+  <font color="#ffff00">if</font> (easter &gt; <font color="#ff6060">99</font>) {
+  easter = <font color="#ff6060">0</font>;
+  <font color="#ffff00">try</font> {
+  Image[] images = <font color="#ffff00">new</font> Image[<font color="#ff6060">2</font>];
+  images[<font color="#ff6060">0</font>] = Image.createImage(IMG_TREASURE);
+  images[<font color="#ff6060">1</font>] = Image.createImage(IMG_TREASURE2);
+  Animation ac = <font color="#ffff00">new</font> Animation(images, getDisplay());
+  Alert alert = <font color="#ffff00">new</font> Alert(<font color="#ff6060">" You found a treasure!"</font>, <font color="#ff6060">null</font>, <font color="#ff6060">null</font>,
+  AlertType.ALARM);
+  alert.setTimeout(<font color="#ff6060">5000</font>);
+  display.setCurrent(alert, ac);
+  ac.addCommand(homeCommand);
+  ac.setCommandListener(<font color="#00ff00">this</font>);
+  ac.startAnimation();
+} <font color="#ffff00">catch</font> (IOException e) {
+<font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG + e.getMessage());
+}
+}
+}
+
+<font color="#00ff00">private</font> <font color="#00ff00">void</font> showResultImage()
+{
+  <font color="#ffff00">try</font> {
+  img = Image.createImage(<font color="#ff6060">"/img/"</font> + result + <font color="#ff6060">".png"</font>);
+} <font color="#ffff00">catch</font> (IOException e) {
+<font color="#ffff00">throw</font> <font color="#ffff00">new</font> JSimpleDiceException(EXCEPTION_MSG + e.getMessage());
+}
+Alert alert = <font color="#ffff00">new</font> Alert(String.valueOf(result), <font color="#ff6060">null</font>, img,
+AlertType.INFO);
+alert.setTimeout(Alert.FOREVER);
+display.setCurrent(alert, form);
+}
+
+<font color="#00ff00">public</font> <font color="#00ff00">void</font> startApp()
+{
+  <font color="#ffff00">try</font> {
+  Image image = Image.createImage(IMG_LOGO);
+  ImageItem logo = <font color="#ffff00">new</font> ImageItem(<font color="#ff6060">null</font>, image, ImageItem.LAYOUT_CENTER
+  | ImageItem.LAYOUT_NEWLINE_BEFORE
+  | ImageItem.LAYOUT_NEWLINE_AFTER, <font color="#ff6060">"Dice"</font>);
+  displayForm(logo);
+} <font color="#ffff00">catch</font> (IOException e) {
+System.err.println(<font color="#ff6060">"Logo not available! "</font>);
+e.printStackTrace();
+} <font color="#ffff00">catch</font> (JSimpleDiceException e) {
+System.err.println(<font color="#ff6060">"Unrecoverable error! "</font>);
+e.printStackTrace();
+}
+}
+}
+</pre>
+
+</div>
+
+</div>
+</div>
+<hr class="style-three">
+
+</section>
+
+</div>
+
+<footer>
+  <p><small>Hosted on <a href="http://github.io">GitHub Pages</a></small></p>
+</footer>
+
+</body>
 </html>
